@@ -188,7 +188,7 @@ In order to utilize the created control over your XAML views you need to follow 
 
 * First, you need to include the namespace of your Custom Renderers folder into the view you want to use the control: ```xmlns:customControls="clr-namespace:App.Views.CustomRenders"``` See next example:
 
-```xml#
+```html
         <?xml version="1.0" encoding="UTF-8"?>
         <local:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:local="clr-namespace:App.Views"
