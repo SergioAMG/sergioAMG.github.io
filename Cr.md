@@ -46,7 +46,7 @@ The following code demostrates how to create the the class that will extend from
     {
         // Bindable Properties
     	public static readonly BindableProperty SetPaddingLeftProperty = BindableProperty.Create(nameof(PaddingLeftProperty), typeof(int), typeof(ExtendedEntry), 0);
-    	public static readonly BindableProperty SetMarginBottomProperty = BindableProperty.Create("SetMarginBottom", typeof(float), typeof(ExtendedEntry), 0.0f);
+    	public static readonly BindableProperty SetMarginBottomProperty = BindableProperty.Create(nameof(MarginBottom), typeof(float), typeof(ExtendedEntry), 0.0f);
     	
     	//Properties Implementation
         public int PaddingLeftProperty
