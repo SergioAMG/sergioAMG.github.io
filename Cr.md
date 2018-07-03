@@ -27,7 +27,7 @@ The followings steps illustartes how a custom control is created under Xamarin.F
 4. Create a folder in each specif platform you want to extend the control, name the folder **Renderers**.
 5. Create a class inside the created folder and name this class according to Propelics Standards: ```Extended + [controlName] + Renderer + .cs``` e.g. ExtendedLabelRenderer.cs, ExtendedEntryRenderer.cs. Once the class is created, the required assembly tag needs to be added to the top of the class in order to make it available for the rest of the code. ```[assembly: ExportRenderer(typeof(Type), typeof(TypeRenderer))]``` Finally, you need to inherit the class from the corresponding **Renderer Type**. You can find in the following URL a list of existing renderers and their corresponding classes:
 <https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/custom-renderer/renderers>
-6. After the previos steps, now you must override the method: **OnElementChanged** of the current class.
+6. After the previous steps, now you must override the method: **OnElementChanged** of the current class.
 7. Assign the instance of the base control in a variable.
 8. Implement the actual control customization based on properties and methods created in the Xamarin.Forms control class. This process of customization **should** be implemented in separated methods in order to improve the readability of the control. The created methods will be executed inside the **OnElementChanged** method.
 9. Add parameter validation according to the renderer base class doc.
@@ -160,7 +160,7 @@ The following code demonstrates the implementation of the created class at platf
 	            if (_extendedEntry.PaddingLeftProperty != 0)
 	            {
 	               Control.LeftView = new UIView(new CGRect(0,0,_extendedEntry.PaddingLeftProperty,0));
-                   Control.LeftViewMode = UITextFieldViewMode.Always;
+                       Control.LeftViewMode = UITextFieldViewMode.Always;
 	            }
 	        }
 	        private void SetMarginBottomProperty()
