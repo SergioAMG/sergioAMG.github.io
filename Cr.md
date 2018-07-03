@@ -31,6 +31,7 @@ Xamarin.Forms apps need four components to use DependencyService:
 ### **Interface**
 The interface you design will define how you interact with platform-specific functionality. It will be only a contract for exposing standard functionalities. The example below specifies a simple interface for obtaining the device orientation.
 
+```c#
     public enum DeviceOrientations
     {
         Undefined,
@@ -42,11 +43,13 @@ The interface you design will define how you interact with platform-specific fun
     {
         DeviceOrientations GetOrientation();
     }
+```
 
 ### **Implementation Per Platfom**
 Once a suitable interface has been designed, that interface must be implemented in the project for each platform that you are targeting.
 The following code demonstrates the implementation of the created interface in IOS:
 
+```c#
     public class DeviceOrientationImplementation : IDeviceOrientation
     {
         public DeviceOrientationImplementation()
@@ -62,9 +65,11 @@ The following code demonstrates the implementation of the created interface in I
             return isPortrait ? DeviceOrientations.Portrait : DeviceOrientations.Landscape;
         }
     }
+```
 
 The following code demostrates the implementation of the created interface in Android:
 
+```c#
     public class DeviceOrientationImplementation : IDeviceOrientation
     {
         public DeviceOrientationImplementation()
@@ -82,21 +87,26 @@ The following code demostrates the implementation of the created interface in An
             return isLandscape ? DeviceOrientations.Landscape : DeviceOrientations.Portrait;
         }
     }
-    
+```
+   
 ### **Registration**
 Each implementation of the interface needs to be registered with DependencyService with a metadata attribute.
 The following code shows the registration in both platforms:
 
+```c#
     [assembly: Xamarin.Forms.Dependency(typeof(DeviceOrientationImplementation))]
     namespace testApp.Droid
     {
         public class DeviceOrientationImplementation : IDeviceOrientation
         { ...
+```
 
 ### **Call to DependencyService**
 Once the project has been set up with a common interface and implementations for each platform, use DependencyService to get the right implementation at runtime.
 
+```c#
     var orientation = DependencyService.Get<IDeviceOrientation>().GetOrientation();
+```
 
 DependencyService.Get<T> will find the correct implementation of interface T.
 
