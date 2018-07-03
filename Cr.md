@@ -199,7 +199,7 @@ In order to utilize the created control over your XAML views you need to follow 
            
 * Then, you need to add the corresponding XAML tag where you want to use the Custom Control. After properly importing it in the previous step, this will be available to be used in the view.
 
-```xml#
+```html#
         <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand">
         	<Button Margin="0,0,0,0" Image="{Binding StepDownImage}" HorizontalOptions="Start" />
             	<customControls:ExtendedEntry x:Name="BoxQuantity" Text="{Binding StepperEntry, Mode=TwoWay}" Margin="6,-4,6,0" BackgroundColor="{StaticResource RotateEntrInputBox}" MarginBottom="2" CenterText="true" />
