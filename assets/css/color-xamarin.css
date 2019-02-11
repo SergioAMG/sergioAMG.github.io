@@ -85,3 +85,11 @@ g.Header {
 .content table tr td img {
     width: 50;
 }
+
+.socialNetworks {
+    width: 98% !important;
+}
+
+.mapouter {
+    margin-top: 20px;
+}
