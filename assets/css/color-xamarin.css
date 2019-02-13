@@ -126,3 +126,7 @@ section {
 .zoom-anim-dialog p, .zoom-anim-dialog ul li {
     font-size: 14px;
 }
+
+.project_content {
+    border: 1px solid #e3e3e5;
+}
