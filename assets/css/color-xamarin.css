@@ -93,3 +93,15 @@ g.Header {
 .mapouter {
     margin-top: 20px;
 }
+
+.projectsScreenshots div {
+    padding: 50px;
+}
+
+.projectsScreenshots div img, .projectsScreenshots div hr {
+    margin-bottom: 50px;
+}
+
+.zoom-anim-dialog {
+    padding: 50px;
+}
