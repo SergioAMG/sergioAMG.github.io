@@ -103,5 +103,26 @@ g.Header {
 }
 
 .zoom-anim-dialog {
-    padding: 50px;
+    padding: 20px;
+}
+
+section {
+    max-width: 1000px;
+}
+
+.zoom-anim-dialog {
+    background-color: #f7f8f9;
+}
+
+.mfp-container {
+    width: auto;
+}
+
+.my-mfp-zoom-in .mfp-container {
+    margin: 35px;
+    padding-bottom: 60px;
+}
+
+.zoom-anim-dialog p, .zoom-anim-dialog ul li {
+    font-size: 14px;
 }
