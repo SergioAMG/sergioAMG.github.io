@@ -72,6 +72,9 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134262246-1"></script>
         <script>
+            // Disable right click 
+            document.addEventListener('contextmenu', event => event.preventDefault());
+            
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -195,7 +198,7 @@
                                 <a href="mailto:sergioamg@outlook.com" title="Outlook sergioamg">
                                     <i class="fa fa-envelope-o fa-lg"></i>
                                 </a>
-                                <a href="http://www.facebook.com/sergioarturomartinez" title="Facebook sergioarturomartinez" target="_blank">
+                                <a href="http://www.facebook.com/sergioarturomartinez" title="Facebook sergioarturomartinez" target="_blank" style="display:none;">
                                     <i class="fa fa-facebook fa-lg"></i>
                                 </a>
                                 <a href="skype:sergioarturomartinez?add" title="Skype sergioarturomartinez">
@@ -206,25 +209,25 @@
                             <!--Menu Items-->
 							<ul class="list-unstyled menu_list" id="menu">
 								<li>
-                                    <a href="#home" class="active_item">home</a>
+                                    <a href="#home" class="active_item" title="Home">home</a>
                                 </li>
 								<li>
-                                    <a href="#about">about me</a>
+                                    <a href="#about" title="About Me">about me</a>
                                 </li>
                                 <li>
-                                    <a href="#resume">my resume</a>
+                                    <a href="#resume" title="My Resume">my resume</a>
                                 </li>
                                 <li>
-                                    <a href="#services">services</a>
+                                    <a href="#services" title="Services">services</a>
                                 </li>
                                 <li>
-                                    <a href="#portfolio">portfolio</a>
+                                    <a href="#portfolio" title="Portfolio">portfolio</a>
                                 </li>
                                 <li>
-                                    <a href="#blog">my blog</a>
+                                    <a href="#blog" title="My Blog" style="display:none;">my blog</a>
                                 </li>
 								<li>
-                                    <a href="#contact">contact</a>
+                                    <a href="#contact" title="Contact">contact</a>
                                 </li>
 							</ul>
 
@@ -453,7 +456,7 @@
                                 </div><!--.skills-->
 
                                 <!--Testimonials-->
-                                <div class="testimonials margin-top-45">
+                                <div class="testimonials margin-top-45" style="display:none;">
                                     <h3 class="subtitle">Testimonials
                                         <svg width="66px" height="8px" viewBox="0 0 66 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <g class="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-147.000000, -464.000000)" opacity="0.2" stroke-linecap="round" stroke-linejoin="round">
@@ -1046,7 +1049,7 @@
                                 </div>
                                 <ul class="list-unstyled ul-filter">
                                     <li data-filter="*" class="active_filter">all</li>
-                                    <li data-filter=".logo">logo</li>
+                                    <li data-filter=".droid">Android</li>
                                     <li data-filter=".coding">coding</li>
                                     <li data-filter=".design">Design</li>
                                 </ul>
@@ -1054,7 +1057,7 @@
                                 <div class="row grid">
 
                                     <!--project 1 (Project popup)-->
-                                    <div class="col-xs-12 col-sm-6 item grid-sizer design">
+                                    <div class="col-xs-12 col-sm-6 item grid-sizer droid">
                                         <div class="project_content">
                                             <div class="my_img">
                                                 <img src="assets/images/portfolio/work-1.jpg" alt=''>
@@ -1072,52 +1075,54 @@
                                         </div>
                                     </div>
                                     <!--Project Details-->
-                                    <div id="slider_popup" class="zoom-anim-dialog mfp-hide">
+                                    <div id="slider_popup" class="zoom-anim-dialog mfp-hide" style="padding: 20, 0;">
                                         <div class="display-table">
                                             <div class="display-table-cell">
                                                 <div class="row">
-                                                    <div class="col-sm-6">
-
-                                                        <!--Start slider-->
-                                                        <div class="project__slider">
-                                                            <ul class="project-slider">
-
-                                                                <!-- image 1 -->
-                                                                <li>
-                                                                    <img src="assets/images/portfolio/work-2.jpg" alt="">
-                                                                </li>
-
-                                                                <!-- image 2 -->
-                                                                <li>
-                                                                    <img src="assets/images/portfolio/work-3.jpg" alt="">
-                                                                </li>
-
-                                                                <!-- image 3 -->
-                                                                <li>
-                                                                    <img src="assets/images/portfolio/work-4.jpg" alt="">
-                                                                </li>
-
-                                                            </ul>
-                                                        </div>
-                                                        <!--End slider-->
-
-                                                        <img src="assets/images/portfolio/work-5.jpg" alt="" class="margin-top-45">
-
-                                                        <!--= Youtube Video =-->
-                                                        <iframe height="342" src="https://www.youtube.com/embed/hpeYWdkUtcE?rel=0&showinfo=0&modestbranding=1&hd=1&autohide=1&feature=oembed" allowfullscreen class="margin-top-45"></iframe>
-                                                        
+                                                    <div class="col-sm-2">
+                                                        <img src="assets/images/client/ib_logo_big.png">
                                                     </div>
-                                                    <div class="col-sm-6">
-                                                        <h3>Project Popup</h3>
+                                                    <div class="col-sm-10">
+                                                        <h3>Interstate Batteries / RMS</h3>
                                                         <ul class="list-unstyled project_info">
-                                                            <li><span>Client</span> : Envato</li>
-                                                            <li><span>Date</span> : March 19, 2017</li>
-                                                            <li><span>Skills</span> : HTML5, JS, CSS3</li>
+                                                            <li><span>Client</span> : Interstate Batteries / USA</li>
+                                                            <li><span>Date</span> : Dec, 2017</li>
+                                                            <li><span>Publish</span> : Enterprise Application</li>
+                                                            <li><span>Technologies</span> : C#, Xamarin.Forms -> Android, Progress / Kinvey</li>
                                                         </ul>
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                                        </p>
-                                                        <a href="#" class="demo">Visit website</a>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sagittis justo nec mauris dapibus, non commodo eros porttitor. Morbi sapien nisl, dictum ut nibh egestas, cursus lacinia lorem. Cras arcu est, condimentum vel aliquet vitae, congue ut turpis. Etiam dui turpis, sagittis iaculis egestas eu, sodales non orci. Morbi sit amet varius sapien, vel dignissim neque. Ut vel libero bibendum, efficitur lorem at, facilisis dui. Aliquam erat volutpat. Suspendisse ligula tellus, lacinia ac aliquam sit amet, convallis in justo. Aliquam eu varius orci. In consequat eu sem eu ornare. Etiam viverra tincidunt odio, id sagittis lorem ullamcorper id. Phasellus imperdiet volutpat orci sit amet dignissim. In nec tristique urna. In non congue sapien. Morbi fringilla turpis eu elit egestas venenatis. Duis mollis nulla diam, ac suscipit ligula ornare sed. Suspendisse non nisi et quam gravida placerat a a odio. Etiam semper, magna vitae hendrerit suscipit, urna massa pharetra massa, sed venenatis leo massa rutrum nisl. Praesent malesuada odio et efficitur elementum. Ut sapien elit, dapibus quis elit eu, gravida cursus tortor. Sed ac risus molestie, lacinia dui sit amet, mollis erat. Mauris sed ligula sapien. Vivamus pellentesque tempus ultrices. Suspendisse posuere volutpat malesuada.</p>
+                                                        <a href="https://www.interstatebatteries.com" class="demo" target="_blank">Visit website</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row projectsScreenshots">
+                                                    <div class="col-sm-3">
+                                                        <img src="assets/images/portfolio/ib/Bypass page.png">
+                                                        <hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Change route.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Forgot password.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Hotshot page.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Invoice list.png">
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <img src="assets/images/portfolio/ib/Login page.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Main menu.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Map view.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Pick list.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Printouts consignment.png">
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <img src="assets/images/portfolio/ib/Printouts load and unload.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Reclass page.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Route dashboard.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Route summary.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Route tasks.png">
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <img src="assets/images/portfolio/ib/Servicing rotate.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Signature page.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Summary menu.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Transfer oute page.png"><hr style="border-top: dotted 1px;" />
+                                                        <img src="assets/images/portfolio/ib/Truck load.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1376,7 +1381,7 @@
                                                     </g>
                                             </svg>
                                         </h3>
-                                        <p>I am always open to a chat. If you have a business opportunity you would like to make it a real product or if you have a business proposition, please, feel free to contact me on any of my social networks.</p>
+                                        <p>I am always open to a chat. If you have a business opportunity and you would like to make it a real product or if you have a business proposition, please, feel free to contact me on any of my social networks.</p>
                                         <div class="info">
 
                                             <div class="item">
@@ -1505,7 +1510,7 @@
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
 
         <!-- Main script js -->
-		<script src="assets/js/custom.js"></script>
+        <script src="assets/js/custom.js"></script>
 
 	</body>
 </html>
