@@ -98,6 +98,11 @@ g.Header {
     margin-top: 20px;
 }
 
+.mapouter iframe
+{
+    width: 330px;
+}
+
 .projectsScreenshots div {
     padding: 50px;
 }
