@@ -98,9 +98,13 @@ g.Header {
     margin-top: 20px;
 }
 
-.mapouter iframe
+@media(max-width: 400px)
 {
-    width: 330px;
+    .mapouter iframe
+    {
+        width: 300px;
+        float: left;
+    }
 }
 
 .projectsScreenshots div {
