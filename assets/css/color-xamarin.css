@@ -143,3 +143,20 @@ section {
 .project_content {
     border: 1px solid #e3e3e5;
 }
+
+@media(max-width: 760px)
+{
+    .socialNetworks {
+        margin-top: 25px;
+    }
+}
+
+.sendMessage {
+    margin-top: 15px;
+}
+
+.sendMessage input[type="text"],
+.sendMessage input[type="email"]
+{
+    width: 80%;
+}
