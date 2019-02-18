@@ -160,3 +160,11 @@ section {
 {
     width: 80%;
 }
+
+.testimonial .testi-content p {
+    font-style: italic;
+}
+
+.testimonial img {
+    opacity: 0.95;
+}
